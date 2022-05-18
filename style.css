@@ -20,9 +20,22 @@ header{
 }
 
 header p{
-    font-size: 16px;
+    font-size: 1rem;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 #form input{
-    font-size: 32px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#submit_btn{
+    font-size: 1.5rem;
+    width: 25%; 
 }
