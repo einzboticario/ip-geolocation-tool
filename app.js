@@ -8,6 +8,5 @@ fetch('https://api.ipify.org/?format=json')
 $(document).ready(function(){
     $("#form").submit(function(event){
         event.preventDefault;
-
     })
 })
