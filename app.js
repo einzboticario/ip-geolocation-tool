@@ -1,11 +1,30 @@
+
 //display user ip
 const user_ip = document.getElementById("user_ip");
-
-//did not use ipgeoloc for less api request consumption
 fetch('https://api.ipify.org/?format=json')
     .then(results => results.json())
     .then(data => user_ip.innerHTML = data.ip);
 
+//google map
+function initMap(){
+
+    //default loc
+    const def = { lat: 14.5589, lng: 121.0181 };
+
+    var options = {
+        zoom: 15,
+        center: def,
+    }
+
+    //map centered at default loc
+    const map = new google.maps.Map(document.getElementById('map'), {options});
+
+    //marker placed at default loc
+    const marker = new google.maps.Marker({
+        position: def,
+        map: map,
+    })
+}
 
 $(document).ready(function(){
     //ip search submit
@@ -30,7 +49,6 @@ $(document).ready(function(){
             //show data in console
             console.log(data);
 
-            //it's readable
             var country_flag = data.country_flag;
             var city = data.city;
             var country_name = data.country_name;
@@ -51,9 +69,8 @@ $(document).ready(function(){
             console.log(pos)
         })
     })
-    
 
-    //Functions
+    //functions
     function displayDetails(country_flag, city, country_name) {
         //append html containing ip details
         var ip_details = `<img src=${country_flag}><h4>${city}, ${country_name}</h4>`;
