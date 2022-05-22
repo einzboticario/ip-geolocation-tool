@@ -15,7 +15,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30vh;
+    height: 25vh;
     flex-direction: column;
 }
 
@@ -52,4 +52,10 @@ span#user_ip{
 
 #ip_details img{
     margin-bottom: 10px;
+}
+
+#map{
+    height: 400px;
+    width: 100;
+    margin-bottom: 20px;
 }
