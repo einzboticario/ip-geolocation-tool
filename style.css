@@ -1,3 +1,5 @@
+/* global */
+
 *{
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
@@ -11,11 +13,24 @@
     background: #E6D690;
 }
 
+/* body */
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    background-image: linear-gradient(to left, #ffffff 0%, #d7e1ec 74%);
+    background-repeat: inherit;
+}
+
+/* header */
+
 header{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 25vh;
+    height: 30vh;
     flex-direction: column;
 }
 
@@ -43,19 +58,50 @@ span#user_ip{
     color: tomato;
 }
 
-#ip_details{
+/* results div */
+
+#results{
     display: flex;
+    width: 60vw;
+    border: 1px solid black;
+    background: #fff;
+    overflow: hidden;
+    flex-direction: row;
+}
+
+/* ip_details div */
+
+#ip_details{
+    background: #fff;
+    display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
+    padding: 3rem;
+    width: 50%;
+    border: 0.1px solid black;
+}
+
+#ip_details span{
+    color: tomato;
+}
+
+/* others div */
+
+#others{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 3rem;
     align-items: center;
+    border: 0.1px solid black;
 }
 
-#ip_details img{
-    margin-bottom: 10px;
+#others img{
+    height: 150px;
+    width: 250px;
 }
 
-#map{
-    height: 400px;
-    width: 100;
-    margin-bottom: 20px;
+#others button{
+    margin-top: 10px;
 }
