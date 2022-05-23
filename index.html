@@ -17,14 +17,24 @@
             <button type="submit" id="submit_btn">Submit</button>
         </form>
     </header>
-    <div id="map"></div>
-    <div id="ip_details"></div>
 
+    <div id="results">
+        <div id="ip_details">
+            <h3>Country Name: <span class="ip_data"></span></h2>
+            <h3>City: <span class="ip_data"></span></h2>
+            <h3>Zip Code: <span class="ip_data"></span></h2>
+            <h3>ISP: <span class="ip_data"></span></h2>
+            <h3>Latitude: <span class="ip_data"></span></h2>
+            <h3>Longitude: <span class="ip_data"></span></h2>
+        </div>
+        <div id="others">
+            <img src="./images/ph-flag.png" alt="">
+            <button>Google Map</button>        
+        </div>
+    </div>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- JS -->
     <script src="./app.js"></script>
-    <!-- Google Maps -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOHqcdSWHQIBpIsT5gmxDZAnwWvovJI4o&callback=initMap"defer></script>
 </body>
 </html>
