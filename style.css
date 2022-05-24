@@ -19,8 +19,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ffffff;
-    background-image: linear-gradient(to left, #ffffff 0%, #d7e1ec 74%);
+    background-color: #fff;
+    background-image: linear-gradient(to left, #fff 0%, #d7e1ec 74%);
     background-repeat: inherit;
 }
 
@@ -52,6 +52,9 @@ header p{
 #submit_btn{
     font-size: 1.5rem;
     width: 25%; 
+    color: #000;
+    background: #D8D8D8;
+    cursor: pointer;
 }
 
 span#user_ip{
@@ -104,4 +107,13 @@ span#user_ip{
 
 #others button{
     margin-top: 10px;
+}
+
+#map_link{
+    border: 2px solid black;
+    padding: 3px;
+    margin-top: 10px;
+    color: #000;
+    background: #D8D8D8;
+    
 }
