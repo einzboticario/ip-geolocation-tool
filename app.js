@@ -21,32 +21,30 @@ $(document).ready(function(){
         }
 
         // ipgeoloc api
-        var API_KEY = "1d9fa633bb0e412393c98f0ad011fd88";
-        var url = `https://api.ipgeolocation.io/ipgeo?apiKey=${API_KEY}&ip=${ip}`;
+        const API_KEY = "1d9fa633bb0e412393c98f0ad011fd88";
+        const url = `https://api.ipgeolocation.io/ipgeo?apiKey=${API_KEY}&ip=${ip}`;
 
         $.get(url, function(data){
             // show data in console
             console.log(data);
 
-            var country_name = data.country_name;
-            var city = data.city;
-            var zipcode = data.zipcode;
-            var isp = data.isp;
-            var country_flag = data.country_flag;
+            const country_name = data.country_name;
+            const city = data.city;
+            const zipcode = data.zipcode;
+            const isp = data.isp;
+            const country_flag = data.country_flag;
 
             // get latitude and longitude, convert it from string to float
-            var latitude = parseFloat(data.latitude);
-            var longitude = parseFloat(data.longitude);
+            const latitude = parseFloat(data.latitude);
+            const longitude = parseFloat(data.longitude);
 
             displayDetails(country_name, city, zipcode, isp, latitude, longitude, country_flag);   
         })
     })
 
-    // function
-
     function displayDetails(country_name, city, zipcode, isp, latitude, longitude, country_flag) {
 
-        var ip_details = `
+        const ip_details = `
         <h3>Country Name: <span class="ip_data">${country_name}</span></h2>
         <h3>City: <span class="ip_data">${city}</span></h2>
         <h3>Zip Code: <span class="ip_data">${zipcode}</span></h2>
@@ -55,11 +53,12 @@ $(document).ready(function(){
         <h3>Longitude: <span class="ip_data">${longitude}</span></h2>
         `
 
-        var other_details = `
+        const other_details = `
         <img src="${country_flag}" alt="">
-        <button>See google map</button>
+        <a href="https://maps.google.com/maps?q=loc:${latitude},${longitude}" id="map_link" target="_blank">Google Map</a>
         `
 
+        // set html
         $("#ip_details").html(ip_details);
         $("#others").html(other_details);
     }
