@@ -60,11 +60,8 @@ $(document).ready(function(){
         <button>See google map</button>
         `
 
-        $("#ip_details").append(ip_details);
-        $("#others").append(other_details);
+        $("#ip_details").html(ip_details);
+        $("#others").html(other_details);
     }
-
-    // to fix: 
-    // stacking img and button elements 
 
 })
