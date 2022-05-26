@@ -1,12 +1,8 @@
-/* global */
-
 *{
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     text-decoration: none;
-    outline: none;
 }
 
 *::selection{
@@ -21,7 +17,6 @@ body{
     align-items: center;
     background-color: #fff;
     background-image: linear-gradient(to left, #fff 0%, #d7e1ec 74%);
-    background-repeat: inherit;
 }
 
 /* header */
@@ -68,7 +63,6 @@ span#user_ip{
     width: 60vw;
     border: 1px solid black;
     background: #fff;
-    overflow: hidden;
     flex-direction: row;
 }
 
