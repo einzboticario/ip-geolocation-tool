@@ -48,8 +48,12 @@ header p{
     font-size: 1.5rem;
     width: 25%; 
     color: #000;
-    background: #D8D8D8;
     cursor: pointer;
+    background-color: #fff;
+}
+
+#submit_btn:hover{
+    background-color: rgb(230, 230, 230);
 }
 
 span#user_ip{
@@ -108,6 +112,10 @@ span#user_ip{
     padding: 3px;
     margin-top: 10px;
     color: #000;
-    background: #D8D8D8;
+    background-color: #fff;
     
+}
+
+#map_link:hover{
+    background-color: rgb(230, 230, 230);
 }
