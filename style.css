@@ -65,9 +65,9 @@ span#user_ip{
 #results{
     display: flex;
     width: 60vw;
-    border: 1px solid black;
     background: #fff;
     flex-direction: row;
+    border: 0.1px solid red;
 }
 
 /* ip_details div */
@@ -79,8 +79,8 @@ span#user_ip{
     flex-direction: column;
     justify-content: center;
     padding: 3rem;
-    width: 50%;
     border: 0.1px solid black;
+    width: 30vw;
 }
 
 #ip_details span{
@@ -92,10 +92,10 @@ span#user_ip{
 #others{
     display: flex;
     flex-direction: column;
-    width: 50%;
     padding: 3rem;
     align-items: center;
     border: 0.1px solid black;
+    width: 30vw;
 }
 
 #others img{
@@ -118,4 +118,56 @@ span#user_ip{
 
 #map_link:hover{
     background-color: rgb(230, 230, 230);
+}
+
+/* Media Queries */
+@media (max-width: 1200px)
+{
+    header p, #user_ip{
+        font-size: 1.5rem;
+    }
+    #form input{
+        font-size: 3rem;
+    }
+    #form button{
+        font-size: 2rem;
+    }
+    #results{
+        flex-direction: column;
+        width: 60%;
+        font-size: 1.2rem;
+    }
+    #results > *{
+        width: auto;
+    }
+}
+
+@media (max-width: 1030px){
+    header p, #user_ip{
+        font-size: 1.3rem;
+    }
+    #form input{
+        font-size: 2.5rem;
+    }
+    #form button{
+        font-size: 2rem;
+    }
+    #results{
+        width: 80%;
+    }
+}
+
+@media (max-width: 600px){
+    header p, #user_ip{
+        font-size: 1.2rem;
+    }
+    #form input{
+        font-size: 2rem;
+    }
+    #form button{
+        font-size: 1.5rem;
+    }
+    #results{
+        width: 100%;
+    }
 }
