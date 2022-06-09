@@ -134,6 +134,10 @@ footer a{
     color: #000;
 }
 
+footer a:hover{
+    text-decoration: underline;
+}
+
 /* media queries */
 @media (max-width: 1200px)
 {
