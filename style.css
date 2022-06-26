@@ -1,4 +1,5 @@
 /* global */
+
 :root{
     --btn-hover: rgba(0, 0, 0, 0.8);
 }
@@ -8,6 +9,7 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    box-sizing: border-box;
 }
 
 *::selection{
@@ -20,7 +22,22 @@ body{
     flex-direction: column;
     align-items: center;
     background-color: #fff;
-    background-image: url(./background.jpg);
+}
+
+.background-image{
+    position: fixed;
+    z-index: -1;
+    display: block;
+    background-image: url('./background.jpg');
+    width: 100%;
+    height: 100%;
+
+    /* blur */
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
 }
 
 /* header */
@@ -60,11 +77,6 @@ header p{
     transition: all 0.2s;
 }
 
-#submit_btn:hover{
-    color: #fff;
-    background-color: var(--btn-hover);
-}
-
 span#user_ip{
     color: tomato;
 }
@@ -86,7 +98,7 @@ span#user_ip{
     flex-direction: column;
     justify-content: center;
     padding: 3rem;
-    width: 30vw;
+    width: 50%;
 }
 
 #ip_details span{
@@ -99,13 +111,13 @@ span#user_ip{
     flex-direction: column;
     padding: 3rem;
     align-items: center;
-    width: 30vw;
+    width: 50%;
 }
 
 #others img{
     height: 150px;
     width: 250px;
-    border: 1px solid black;
+    box-shadow: -5px 3px 10px rgba(0, 0, 0, 0.3);
 }
 
 #map_link{
@@ -118,6 +130,8 @@ span#user_ip{
     transition: all 0.2s;
 }
 
+/* buttons hover animation */
+#submit_btn:hover,
 #map_link:hover{
     color: #fff;
     background-color: var(--btn-hover);
@@ -142,34 +156,33 @@ footer a:hover{
 @media (max-width: 1200px)
 {
     header p, #user_ip{
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     #form input{
-        font-size: 3rem;
+        font-size: 2rem;
     }
     #form button{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     #results{
         flex-direction: column;
-        width: 60%;
-        font-size: 1.2rem;
+        width: 65%;
+        font-size: 1rem;
     }
     #results > *{
         width: auto;
     }
+    #others{
+        border-top: 1px solid black;
+        align-items: center;
+    }
+    footer{
+        position: static;
+        margin: 1rem;
+    }
 }
 
 @media (max-width: 1030px){
-    header p, #user_ip{
-        font-size: 1.3rem;
-    }
-    #form input{
-        font-size: 2.5rem;
-    }
-    #form button{
-        font-size: 2rem;
-    }
     #results{
         width: 80%;
     }
@@ -177,15 +190,18 @@ footer a:hover{
 
 @media (max-width: 600px){
     header p, #user_ip{
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     #form input{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     #form button{
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     #results{
         width: 100%;
+    }
+    #results{
+        font-size: 0.85rem;
     }
 }
