@@ -21,7 +21,7 @@ $(document).ready(function(){
         }
 
         // ipgeoloc api
-        const API_KEY = "1d9fa633bb0e412393c98f0ad011fd88";
+        const API_KEY = "be468e25afa1470d931519db29f2575c";
         const url = `https://api.ipgeolocation.io/ipgeo?apiKey=${API_KEY}&ip=${ip}`;
 
         $.get(url, function(data){
