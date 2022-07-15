@@ -1,6 +1,9 @@
+// api
+const API_KEY = "be468e25afa1470d931519db29f2575c";
+
 // display user ip
 const user_ip = document.getElementById("user_ip");
-fetch('https://api.ipify.org/?format=json')
+fetch(`https://api.ipgeolocation.io/ipgeo?apiKey=${API_KEY}`)
     .then(results => results.json())
     .then(data => user_ip.innerHTML = data.ip);
 
@@ -20,8 +23,7 @@ $(document).ready(function(){
             alert("Please enter an IP address.");
         }
 
-        // ipgeoloc api
-        const API_KEY = "be468e25afa1470d931519db29f2575c";
+        // making api request
         const url = `https://api.ipgeolocation.io/ipgeo?apiKey=${API_KEY}&ip=${ip}`;
 
         $.get(url, function(data){
